@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="image/wallmart.png">
+    <title>My Cart</title>
+  </head>
+  <body>
+    <div class="container-fluid pt-0 pl-0 pr-0">
+        <nav class="navbar sticky-top bg-light shadow-lg mt-0 pt-0 mb-0 pb-0">
+            <a class="navbar-brand"><img src="image/wallmart.png" width="10%"><span class="text-success">wall
+                    mart</span></a>
+                    <div class="nav-item ml-5">
+                        <a class="text-dark text-decoration-none" href="intex.html">HOME</a>
+                    </div>
+            <div class="nav-item ml-5">
+                <a class="text-dark text-decoration-none" href="shop.html">SHOP</a>
+            </div>
+            <div class="nav-item ml-5">
+                <a class="text-dark text-decoration-none" href="about.html">ABOUT US</a>
+            </div>
+            <div class="nav-item ml-5">
+                <a class="text-dark text-decoration-none" href="contact.html">CONTACT</a>
+            </div>
+            <div class="nav-item ml-5">
+                <a class="text-dark text-decoration-none" href="mycart.html">CART</a>
+            </div>
+        </nav>
+        <div class="row m-4 pt-5">
+            <div class="col-lg-6">
+                <div class="row pl-0 pt-5  pb-5 ">
+                    <div class="col-lg-3 pb-4 font-weight-bold text-success">product</div>
+                    <div class="col-lg-3 font-weight-bold text-success">price</div>
+                    <div class="col-lg-3 font-weight-bold text-success">quantity</div>
+                    <div class="col-lg-3 font-weight-bold text-success">subtotal</div>
+                    
+                    <div class="col-lg-3 pl-0 pb-3 text-muted"><img src="image/blogpost2.jpg" width="30%">* product</div>
+                    <div class="col-lg-3 mt-2 text-muted">$100.00</div>
+                    <div class="col-lg-3"><input type="number" class="form-control" placeholder="0"id="quality1" ></div>
+                    <div class="col-lg-3 mt-2 text-muted" id="totalamount1">$000.00</div>
+
+                    <div class="col-lg-3 pl-0 pb-3 text-muted"><img src="image/blogpost1.jpg" width="30%">* product</div>
+                    <div class="col-lg-3 mt-2 text-muted">$100.00</div>
+                    <div class="col-lg-3"><input type="number" placeholder="0" class="form-control" id="quality"></div>
+                    <div class="col-lg-3 mt-2 text-muted" id="totalamount">$000.00</div>
+
+                    <div class="col-lg-12"><button class="btn btn-primary pl-5 pr-5 badge-pill" onclick="updatecart()">Update Cart</button></div>
+                <div class="col-lg-12 pt-5 mt-5 text-center"><input type="text" placeholder="Coupon Code" class="border-left border-right border-top border-bottom"><button class="btn btn-primary pl-5 pr-5 ml-5 badge-pill">Apply Coupon</button></div>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-0 pl-5 pr-5 pb-5"> 
+                <div class="pt-0 pl-5 pr-5 pb-5 m-4">
+                    <h1 class="font-weight-bold text-success">cart total</h1>
+                    <hr>
+                    <p class="text-monospace">S U B T O T A L<span class="pl-5 font-weight-bold" id="subtotal">$000.00</span></p>
+                    <hr>
+                    <p class="text-monospace">T O T A L<span class="pl-5 ml-5 font-weight-bold" id="avgtotal">$000.00</span></p>
+                    <div><button class="btn btn-primary badge-pill pl-3 pr-3" onclick="checkout()">Proceed To Checkout</button></div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 m-4">
+            <div class="col-lg-9 mt-5 pt-5">
+                <h1 class="font-weight-bold mb-4 text-success">join our newsletter</h1>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control shadow text-monospace newsletter-input"
+                        placeholder="Y O U R  E M A I L"id="emailbox" >
+                    <button class="btn btn-primary pl-5 pr-5 badge-pill" type="button"onclick="subscribe()"id="btn">Subscribe</button>
+                </div>
+                <div id="erroremail" class="text-success"></div>
+                <div class="mt-5 mb-5"><img class="mr-4" src="image/facebook-app-symbol.png" width="2%"><img
+                        class="mr-4" src="image/instagram.png" width="2%"><img src="image/twitter.png" width="2%"></div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row m-4 mt-5 text-muted">
+            <div class="col-lg-8">
+                <p>© 2021 all rights reserved</p>
+            </div>
+            <div class="col-lg-2">
+                <a href="" class="text-muted">help & info</a>
+            </div>
+            <div class="col-lg-2">
+                <a href="" class="text-muted">terms and privacy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

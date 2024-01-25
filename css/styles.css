@@ -1,0 +1,40 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,400;0,500;0,700;1,100;1,300&family=Quicksand:wght@700&display=swap');
+
+*{
+    text-transform: capitalize;
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.newsletter-input{
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+h1{
+    font-size: 50px;
+}
+img{
+    cursor: pointer;
+    transition: 1s;
+}
+.img-fluid:hover{
+transform: scale(80%);
+}
+.text-decoration-none{
+    transition: 1s;
+}
+.text-decoration-none:hover{
+    background-color: #28a745;
+    border-radius: 5px;
+}
+.btn{
+    transition: 1s;
+}
+.btn:hover{
+    transform: scale(90%);
+}
+ 
